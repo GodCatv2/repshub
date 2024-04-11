@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>REPSHUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="cursor:pointer;">
+        <img src="spain-flag.png" alt="Español" onclick="changeLanguage('es')" class="flag">
+        <a href="index-eng.html" class="header-link">
+            <img src="uk-flag.png" alt="English" class="flag">
+        </a>
+        <h1>REPSHUB</h1>
+    </header>
+    <div class="container">
+        <form onsubmit="performSearch(event)">
+            <div class="search-box">
+                <input type="text" placeholder="Escribe la marca que quieras..." id="search-input">
+            </div>
+        </form>
+        <div id="searchResults"></div>
+        <div class="categories-btn">
+            <button onclick="redirectToCategories()">Informate</button>
+            <button onclick="redirectToCategoriesPage()">Categorías</button>
+        </div>
+    </div>
+    <footer>
+        <p>a NCTS production</p>
+    </footer>
+
+    <script>
+        function performSearch(event) {
+            event.preventDefault();
+    
+            var searchTerm = document.getElementById("search-input").value;
+    
+            window.location.href = "productos.html?q=" + encodeURIComponent(searchTerm);
+        }
+    
+        function redirectToCategories() {
+            window.location.href = "informate.html";
+        }
+
+        function redirectToCategoriesPage() {
+            window.location.href = "categorias.html";
+        }
+
+        function changeLanguage(language) {
+            if (language === 'en') {
+                window.location.href = "index-eng.html";
+            } else {
+                document.documentElement.lang = language;
+            }
+        }
+    </script>
+</body>
+</html>

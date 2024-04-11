@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos - REPSHUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product {
+            background-color: black;
+            width: fit-content;
+            height:fit-content;
+        }
+        .product h3 {
+            color: white;
+            font-family: 'Outfit';
+        }
+        .product h4 {
+            color: white;
+        }
+        .product h5 {
+            font-size: medium;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+        width: 50%;
+        margin: auto;
+        }
+
+        form {
+            color: black;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        }
+
+        label {
+        font-weight: bold;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+
+        textarea {
+        height: 150px;
+        }
+
+        input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+        background-color: #45a049;
+        }
+
+        label[for="fname"]:after {
+        content: "*";
+        color: red;
+        }
+
+        label[for="lname"]:after {
+        content: "*";
+        color: red;
+        }
+
+        label[for="country"]:after {
+        content: "*";
+        color: red;
+        }
+
+        label[for="subject"]:after {
+        content: "*";
+        color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-link">
+            <h1>REPSHUB</h1>
+        </a>
+    </header>
+
+    <div id="productsContainer">
+        <div class="product">
+            <section class="how-to-buy">
+                <h2>¿Cómo Comprar?</h2>
+                <p>Comprar es fácil. Elige un mediador de compra para acceder a productos de fábricas chinas, ya que estas a menudo no envían pedidos pequeños al extranjero debido a los altos costos. Te recomendamos opciones como:</p>
+                <ul>
+                    <li><strong>Pandabuy</strong></li>
+                    <li><strong>Hagobuy</strong></li>
+                    <li><strong>Cssbuy</strong></li>
+                    <li><strong>Sugargoo</strong></li>
+                </ul>
+                <p>Una vez que hayas configurado tu compra, explora los proveedores en nuestro sitio para encontrar la calidad y precios que buscas, ¡y haz tu pedido!</p>
+                <div class="video-container">
+                    <p><strong>APRENDE A USAR NUESTRA WEB</strong></p>
+                    <p></p>
+                    <video width="875" height="550" controls>
+                        <source src="video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+            
+            <section class="about-us">
+                <h2>¿Quiénes Somos?</h2>
+                <p>Somos un directorio de proveedores chinos. No somos vendedores ni compradores, y no obtenemos ganancias de tus compras. Nuestro propósito es ofrecerte acceso a diversos proveedores de toda China.</p>
+                <p>Esperamos que nuestro sitio te ayude a encontrar información sobre los proveedores. Ten en cuenta que:</p>
+                <p>No nos hacemos responsables de los productos adquiridos a través de nuestra plataforma. Simplemente centralizamos los proveedores para facilitar tus compras en China.</p>
+            </section>
+            
+            <section class="contact-us">
+                <h2>¿Quieres Contactarnos?</h2>
+                <p>¡Estamos aquí para ayudarte! Ponte en contacto con nosotros:</p>
+                <div class="container">
+                    <form action="procesar_formulario.php" method="post">
+                  
+                      <label for="fname">Nombre</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Tu nombre..">
+                  
+                      <label for="lname">Apellidos</label>
+                      <input type="text" id="lname" name="lastname" placeholder="Tus apellidos..">
+                  
+                      <label for="country">Pais</label>
+                      <select id="country" name="country">
+                        <option value="espana">España</option>
+                        <option value="uk">UK</option>
+                        <option value="otro">Otro</option>
+                      </select>
+                  
+                      <label for="subject">Confirmar</label>
+                      <textarea id="subject" name="subject" placeholder="Escribe algo..." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Submit">
+                  
+                    </form>
+                  </div>
+            </section>
+            
+        </div>
+      
+        </div>     
+</body>
+</html>
